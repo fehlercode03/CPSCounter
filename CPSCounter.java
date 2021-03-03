@@ -1,5 +1,5 @@
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -25,25 +25,11 @@ public class CPSCounter {
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
-		panel.addMouseListener(new MouseListener() {
-
-			@Override
-			public void mouseClicked(MouseEvent e) {}
-
-			@Override
-			public void mousePressed(MouseEvent e) {}
-
+		panel.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
 				count++;
-			}
-
-			@Override
-			public void mouseEntered(MouseEvent e) {}
-
-			@Override
-			public void mouseExited(MouseEvent e) {}
-			
+			}			
 		});
 		
 		label = new JLabel();
